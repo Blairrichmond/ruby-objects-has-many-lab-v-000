@@ -3,18 +3,18 @@ class Author
 
   @@post_count = 0
 
-  def initialize(name)
-    @name = name
+  def initialize(title)
+    @title = title
     @posts = []
   end
 
-  def add_post(post)
+  def add_post(title)
     @posts << post
     post.author = self
     @@post_count += 1
   end
 
-  def add_post_by_name(post)
+  def add_post_by_name(title)
     post = Post.new(post)
     @posts << post
     post.author = self
